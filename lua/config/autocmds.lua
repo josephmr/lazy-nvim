@@ -20,3 +20,9 @@ vim.api.nvim_create_autocmd({ "InsertEnter", "WinLeave" }, {
     end
   end,
 })
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = {
+    "gdscript",
+  },
+  command = "setlocal noexpandtab tabstop=4 shiftwidth=4 foldmethod=expr",
+})
